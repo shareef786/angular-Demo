@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../productslist/product';
 import { ProductsdataService } from '../productslist/productsdata.service';
 import { Product } from './product';
 
@@ -15,5 +16,7 @@ export class InventoryComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  deleteProduct(product:Product) {
+    this.productList.pop(product);
+  }
 }
