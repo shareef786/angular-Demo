@@ -9,10 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsdataService } from './productslist/productsdata.service';
 import { InventoryComponent } from './inventory/inventory.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsdataService]
 })
