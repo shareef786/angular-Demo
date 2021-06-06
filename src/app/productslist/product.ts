@@ -2,11 +2,11 @@ export class Product {
   id:number;
   name:string;
   price:number;
-  imgPath:string;
-  constructor(id:number,name:string,price:number,imgPath:string){
+  image: string;
+  constructor(id:number,name:string,price:number,image:string){
     this.id = id;
     this.name = name;
     this.price = price;
-    this.imgPath=imgPath;
+    this.image = image;
   }
 }

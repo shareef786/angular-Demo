@@ -1,1 +1,15 @@
 <h3>List of Products</h3>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Image</th>
+  </thead>
+  <tr *ngFor="let product of productlist">
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td><img [src]="product.image" /></td>
+    <td><button *ngIf="isLoggedIn" click="addToCart(product)">Add to Cart</button></td>
+  </tr>
+</table>
