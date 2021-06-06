@@ -7,10 +7,12 @@ import { HelloComponent } from './hello.component';
 import { ProductslistComponent } from './productslist/productslist.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { ProductsdataService } from './productslist/productsdata.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ProductsdataService]
 })
 export class AppModule { }
