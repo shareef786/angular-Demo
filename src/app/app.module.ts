@@ -10,10 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { ProductsdataService } from './productslist/productsdata.service';
 import { InventoryComponent } from './inventory/inventory.component';
 import { MenuComponent } from './menu/menu.component';
+import { CartComponent } from './cart/cart.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsdataService]
 })

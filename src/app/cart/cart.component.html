@@ -1,0 +1,13 @@
+<h3>Products Cart</h3>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+  </thead>
+  <tr *ngFor="let product of productList">
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+  </tr>
+</table>
+<div>Total Products count: {{productList.count}}</div>

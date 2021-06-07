@@ -15,8 +15,8 @@ export class ProductslistComponent implements OnInit {
    }
   ngOnInit() {
   }
-  addToCart(product:Product) {
-    alert('Heloo');
+  addToCart(product:Product, dataservice: ProductsdataService) {
+    dataservice.addProductToCart(product);
   }
 
 }
