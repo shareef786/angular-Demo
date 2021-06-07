@@ -13,11 +13,12 @@ import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app.routing.module';
 import { PriceupdaterComponent } from './priceupdater/priceupdater.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductsdataService]
+  providers: [ProductsdataService, AuthService]
 })
 export class AppModule { }

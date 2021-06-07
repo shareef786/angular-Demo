@@ -3,6 +3,6 @@
 <form>
   <div><label>Username:</label><input type="text" name="username" [(ngModel)] = "username"/></div>
   <div><label>Password:</label><input type="password" name="username" [value] = "password"/></div>
-  <div><label></label><button>Login</button></div>
+  <div><label></label><button (click)="login()">Login</button></div>
 </form>
 Display username: {{username}}
