@@ -5,7 +5,7 @@
     <th>Name</th>
     <th>Price</th>
   </thead>
-  <tr *ngFor="let product of productList">
+  <tr *ngFor="let product of productList, let i=index">
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <!-- Below is Custom Property Binding Example-->
