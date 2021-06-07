@@ -10,7 +10,7 @@
     <td>{{product.price}}</td>
     <!-- Below is Custom Property Binding Example-->
     <td>
-<app-priceupdater [price]="product.price"></app-priceupdater></td>
+<app-priceupdater [price]="product.price" (update)="setNewPrice($event,i)"></app-priceupdater></td>
     <td><button (click)="deleteProduct(product)">Delete</button></td>
   </tr>
 </table>

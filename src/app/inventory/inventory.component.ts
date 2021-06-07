@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../productslist/product';
 import { ProductsdataService } from '../productslist/productsdata.service';
-import { Product } from './product';
 
 @Component({
   selector: 'app-inventory',
@@ -18,5 +17,11 @@ export class InventoryComponent implements OnInit {
   }
   deleteProduct(product:Product) {
     this.productList.pop(product);
+  }
+  setNewPrice(newprice:number,index:number){
+    //Which product price has changed? 
+    //Search by product id
+    console.error("price....{{newprice}}")
+    this.productList[index].price = newprice;
   }
 }
