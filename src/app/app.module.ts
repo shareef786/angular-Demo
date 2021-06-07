@@ -12,10 +12,11 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app.routing.module';
+import { PriceupdaterComponent } from './priceupdater/priceupdater.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsdataService]
 })
