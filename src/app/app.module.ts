@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
+  imports:      [ AppRoutingModule, BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent, UserlistComponent, SignupComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsdataService, AuthService, UserService]
