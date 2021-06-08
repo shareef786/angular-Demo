@@ -14,11 +14,14 @@ import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app.routing.module';
 import { PriceupdaterComponent } from './priceupdater/priceupdater.component';
 import { AuthService } from './auth.service';
+import { UserlistComponent } from './userlist/userlist.component';
+import { UserService } from './user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
+  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent, UserlistComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductsdataService, AuthService]
+  providers: [ProductsdataService, AuthService, UserService]
 })
 export class AppModule { }
