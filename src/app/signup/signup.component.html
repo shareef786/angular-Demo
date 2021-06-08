@@ -1,0 +1,32 @@
+<div>
+  <div>
+    <form>
+        <fieldset>
+          <legend>SignUp</legend>         
+            <!-- Email Block -->
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input type="text"
+                id="inputEmail"
+                placeholder="Email" #email="ngModel" ngModel name="email" required>       
+            </div>
+<div *ngIf="email.invalid && email.dirty">EMail is a required</div>
+            <!-- Password Block -->
+            <div>
+            <div class="form-group">
+              <label for="inputPassword">Password</label>
+              <input type="password"
+                id="inputPassword"
+                placeholder="Password" ngModel name="password" minlength="6" required >
+            </div>         
+          </div>         
+           <!-- Buttons Block -->
+            <div class="form-group">
+              <label></label>  
+              <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-default">Cancel</button>
+              </div>
+        </fieldset>
+    </form>    
+  </div>
+</div>

@@ -17,10 +17,11 @@ import { AuthService } from './auth.service';
 import { UserlistComponent } from './userlist/userlist.component';
 import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent, UserlistComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductslistComponent, HeaderComponent, LoginComponent, InventoryComponent, MenuComponent, CartComponent, PriceupdaterComponent, UserlistComponent, SignupComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductsdataService, AuthService, UserService]
 })
