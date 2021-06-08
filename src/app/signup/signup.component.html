@@ -1,6 +1,6 @@
 <div>
   <div>
-    <form>
+    <form #userform="ngForm" (ngSubmit)="postForm(userform.value)">
         <fieldset>
           <legend>SignUp</legend>         
             <!-- Email Block -->
@@ -10,20 +10,24 @@
                 id="inputEmail"
                 placeholder="Email" #email="ngModel" ngModel name="email" required>       
             </div>
-<div *ngIf="email.invalid && email.dirty">EMail is a required</div>
+<div *ngIf="email.invalid && email.touched">EMail is a required</div>
             <!-- Password Block -->
             <div>
             <div class="form-group">
               <label for="inputPassword">Password</label>
               <input type="password"
                 id="inputPassword"
-                placeholder="Password" ngModel name="password" minlength="6" required >
-            </div>         
+                placeholder="Password" #pwd="ngModel" ngModel name="password" minlength="6" required >
+            </div>   
+            <div *ngIf="pwd.invalid && pwd.touched">
+      <div *ngIf="pwd.errors?.required">Password is required</div>
+      <div *ngIf="pwd.errors?.minlength">Password has to be of min 6 chars</div>
+      </div>
           </div>         
            <!-- Buttons Block -->
             <div class="form-group">
               <label></label>  
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" [disabled]="userform.invalid">Submit</button>
                 <button type="reset" class="btn btn-default">Cancel</button>
               </div>
         </fieldset>

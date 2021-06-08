@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userservice: UserService) { }
 
   ngOnInit() {
   }
 
+  postForm(userObj:any){
+    //HTTP Post request 
+    this.userservice.addUser(userObj).subscribe(response=>{
+      console.log(response);
+      alert('Form is posted successfully');
+    })
+  }
 }
